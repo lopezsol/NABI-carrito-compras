@@ -6,7 +6,7 @@ import { CarritoContext } from "../../context/CarritoContext"
 import { calcularCuotas } from "@/app/lib/utils"
 import { Producto } from "@/app/lib/definiciones"
 
-export default function ProductoCompra({ producto }: { producto: Producto }) {
+export default function ProductoCompra({ producto }: { producto: Producto | any }) {
     const { cantidad, setCantidad } = useContext(ProductosContext)
     const { listaProductos, agregarProducto, aumentarCantidad } = useContext(CarritoContext)
 

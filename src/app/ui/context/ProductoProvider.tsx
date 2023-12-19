@@ -3,7 +3,7 @@ import React, { useReducer, useState } from 'react'
 import { productosMocks } from '@/app/lib/mocks'
 import { ProductosContext } from './ProductosContext'
 
-export const ProductoProvider = ({ children }) => {
+export const ProductoProvider = ({ children, }: { children: any }) => {
     const initialState = [...productosMocks]
     const [busqueda, setBusqueda] = useState('')
     const [cantidad, setCantidad] = useState(1)
@@ -43,20 +43,20 @@ export const ProductoProvider = ({ children }) => {
         return producto
     }
 
-    const productosReducer = (state = initialState, action = {}) => {
-        switch (action.type) {
-            case 'FILTRAR_PRODUCTOS':
-                return state.filter((producto) => {
-                    if (producto.nombre.toLowerCase().includes(action.busqueda.toLowerCase())) {
-                        return { ...producto }
-                    }
-                })
-            default:
-                return state
-        }
-    }    
+    // const productosReducer = (state = initialState, action = {}) => {
+    //     switch (action.type) {
+    //         case 'FILTRAR_PRODUCTOS':
+    //             return state.filter((producto) => {
+    //                 if (producto.nombre.toLowerCase().includes(action.busqueda.toLowerCase())) {
+    //                     return { ...producto }
+    //                 }
+    //             })
+    //         default:
+    //             return state
+    //     }
+    // }    
     return (
-        <ProductosContext.Provider value={{ productos, filtrarProductos, productosFiltrados, busqueda, setBusqueda, getProducto
+        <ProductosContext.Provider value={{ productos, filtrarProductos, productosFiltrados, getProducto
         , getProductoNombre, cantidad, setCantidad}}>
             {children}
         </ProductosContext.Provider>

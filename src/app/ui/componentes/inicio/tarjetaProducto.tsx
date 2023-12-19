@@ -10,7 +10,7 @@ export default function TarjetaProducto({ producto, agregar }: { producto: Produ
     const { listaProductos } = useContext(CarritoContext)
     const agregarProducto = (producto: any) => {
     }
-    const agregado = listaProductos.find((prod) => prod.id === producto.id)
+    const agregado = listaProductos.find((prod: Producto) => prod.id === producto.id)
     return (
 
         <div className="col ">

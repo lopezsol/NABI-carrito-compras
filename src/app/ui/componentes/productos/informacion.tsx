@@ -1,4 +1,6 @@
-export default function Informacion({ producto }: { producto: Producto }) {
+import { Producto } from "@/app/lib/definiciones";
+
+export default function Informacion({ producto }: { producto: Producto | any }) {
     return (
         <div className="container">
             <div className="row mt-1 ">
