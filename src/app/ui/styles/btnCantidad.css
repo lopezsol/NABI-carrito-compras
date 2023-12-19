@@ -1,0 +1,14 @@
+/* boton cantidad */
+
+.btn-cantidad button {
+    border: 1px solid #d3954e;
+    background-color: #d3954e;
+    font-weight: 500;
+    width: 35px;
+  }
+  
+  .btn-cantidad button:hover {
+    background-color: #d3954eb7;
+    transition: all 0.6s;
+  }
+  

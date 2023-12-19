@@ -1,27 +1,83 @@
+/* ;
+@tailwind utilities; 
+*/
+
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: black;
+}
+
+.container, .container-md {
+  flex-grow: 1;  
+}
+
+/* footer y navbar */
+.logo-top img {
+  width: 150px;
+}
+
+.bg-violeta {
+  background-color:#4d264cee;
+}
+.borde-violeta {
+  border: 1px solid #4d264c;
+}
+
+.bg-dorado {
+  background-color:#d3954e;
+}
+.borde-dorado {
+  border: 1px solid #d3954e;
+}
+.borde-b-dorado {
+  border-bottom: 1px solid #d3954e;
+}
+
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+hr {
+  border: 2px solid  #4d264c;
+  opacity: 1;
+}
+
+.btn-dorado {
+  background-color: #d3954e;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-dorado:hover{
+  background-color: #d3954eb7;
+  transition: all 0.6s;
+}
+
+/* producto en concreto, al hacerle click */
+.info-producto-img {
+  max-height: 500px;
 }

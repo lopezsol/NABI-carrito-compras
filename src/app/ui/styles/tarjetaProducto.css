@@ -1,0 +1,78 @@
+/* estilo de los PRODUCTOS en el index */
+.producto {
+    border: 1px solid transparent;
+  }
+  .producto .card-title {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+  .producto img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(215, 250, 217);
+  }
+  .producto .card-body li {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1em;
+  }
+  .producto .card-body li:last-child {
+    font-weight: 700;
+    font-size: 1.3em;
+    font-style: normal;
+  }
+  /* para que no se vea el boton */
+  .producto .btn-dorado {
+    background-color: transparent;
+    color: transparent;
+    font-weight: 500;
+  }
+  /*-----*/
+  
+  /* producto hover */
+  .producto:hover {
+    border: 1px solid #d3954e;
+    transition: all 0.6s;
+  }
+
+  .producto:hover .btn-dorado {
+    background-color: #d3954e;
+    color: black;
+    font-weight: 500;
+  }
+  .producto .btn-dorado:hover{
+    background-color: #d3954eb7;
+    transition: all 0.6s;
+  }
+
+  /* para que no se vea el boton cantidad */
+.producto .btn-cantidad button,
+.producto .btn-cantidad input
+ {
+  background-color: transparent;
+  color: transparent;
+  font-weight: 500;
+  border: 1px solid transparent
+}
+/*-----*/
+
+/* producto hover - boton cantidad*/
+.producto:hover .btn-cantidad button
+{
+  background-color: #d3954e;
+  color: black;
+}
+
+.producto:hover .btn-cantidad input
+{
+  border: 1px solid #d3954e;
+  color: black;
+  font-weight: 400;
+}
+
+.producto .btn-cantidad button:hover
+{
+  background-color: #d3954eb7;
+  transition: all 0.6s;
+}
